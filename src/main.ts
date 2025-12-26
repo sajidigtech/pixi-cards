@@ -11,7 +11,7 @@ let player2;
 const app = new Application();
 
 await app.init({
-  width: 1500,
+  width: 1800,
   height: 1000,
   backgroundColor: 0x1099bb,
 })
@@ -19,6 +19,10 @@ await app.init({
 
 const divContainer = document.getElementById("pixi-container")!;
 divContainer.appendChild(app.canvas);
+
+const previewCardsContainer = new Container();
+app.stage.addChild(previewCardsContainer);
+
 
 const cardSheet = await Assets.load("assets/cardAtlas.json");
 
@@ -39,9 +43,9 @@ const animationSpeed = 0.02;
 
 
 
-let gameOver = true;
+let gameStarted = false;
 
-if(gameOver){
+if(!gameStarted){
   suits.forEach((suit, index) => {
 
   const cardSprite = new AnimatedSprite(cardSheet.animations[suit]);
@@ -53,33 +57,63 @@ if(gameOver){
   cardSprite.animationSpeed = animationSpeed;
   cardSprite.loop = true;
   cardSprite.play();
-  app.stage.addChild(cardSprite);
+
+  previewCardsContainer.addChild(cardSprite)
+  // app.stage.addChild(cardSprite);
 
 
 
 })
 }
 
-// clubCards.anchor.set(0.5);
+const deckTexture = await Assets.load("assets/deckCards.png");
+const deckSprite = new Sprite(deckTexture);
+deckSprite.anchor.set(0.5);
+deckSprite.x = app.screen.width / 2;
+deckSprite.y = 150; // thoda niche so chipke na top se
 
-// clubCards.x = app.screen.width / 2;
-// clubCards.y = app.screen.height / 2;
+app.stage.addChild(deckSprite);
+deckSprite.visible = false;
 
-// clubCards.animationSpeed = 0.05; // slow
-// clubCards.loop = true;
-// clubCards.play();
+if(gameStarted){
 
-// app.stage.addChild(clubCards);
+}
+
+const startButton = new Container();
+
+const btnBg = new Graphics();
+btnBg.beginFill(0x222222);
+btnBg.drawRoundedRect(-120, -40, 240, 80, 20);
+btnBg.endFill();
+
+const btnText = new Text("START GAME", {
+  fill: 0xffffff,
+  fontSize: 28,
+  fontWeight: "bold",
+});
+
+btnText.anchor.set(0.5);
+
+startButton.addChild(btnBg, btnText);
+
+startButton.x = app.screen.width / 2;
+startButton.y = app.screen.height / 2;
+
+startButton.eventMode = "static";
+startButton.cursor = "pointer";
+
+app.stage.addChild(startButton);
 
 
-// import { handlegame } from "./scripts/handlePlayButton";
+startButton.on("pointerdown", ()=>{
+  gameStarted = true;
+  startButton.visible = false;
+  deckSprite.visible = true;
+  previewCardsContainer.visible = false;
+})
 
-// handlegame();
 
 
-
-
-// console.log(deckkk)
 
 import { generateRandomNumber } from "./scripts/generateRandom";
 
