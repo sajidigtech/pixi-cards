@@ -1,0 +1,72 @@
+{
+  "frames": {
+    "club_A":  { "frame": { "x": 0,   "y": 0,   "w": 57, "h": 89 } },
+    "club_2":  { "frame": { "x": 57,  "y": 0,   "w": 57, "h": 89 } },
+    "club_3":  { "frame": { "x": 114, "y": 0,   "w": 57, "h": 89 } },
+    "club_4":  { "frame": { "x": 171, "y": 0,   "w": 57, "h": 89 } },
+    "club_5":  { "frame": { "x": 228, "y": 0,   "w": 57, "h": 89 } },
+    "club_6":  { "frame": { "x": 285, "y": 0,   "w": 57, "h": 89 } },
+    "club_7":  { "frame": { "x": 342, "y": 0,   "w": 57, "h": 89 } },
+    "club_8":  { "frame": { "x": 399, "y": 0,   "w": 57, "h": 89 } },
+    "club_9":  { "frame": { "x": 456, "y": 0,   "w": 57, "h": 89 } },
+    "club_10": { "frame": { "x": 513, "y": 0,   "w": 57, "h": 89 } },
+    "club_J":  { "frame": { "x": 570, "y": 0,   "w": 57, "h": 89 } },
+    "club_Q":  { "frame": { "x": 627, "y": 0,   "w": 57, "h": 89 } },
+    "club_K":  { "frame": { "x": 684, "y": 0,   "w": 57, "h": 89 } },
+
+    "diamond_A":  { "frame": { "x": 0,   "y": 89,  "w": 57, "h": 89 } },
+    "diamond_2":  { "frame": { "x": 57,  "y": 89,  "w": 57, "h": 89 } },
+    "diamond_3":  { "frame": { "x": 114, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_4":  { "frame": { "x": 171, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_5":  { "frame": { "x": 228, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_6":  { "frame": { "x": 285, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_7":  { "frame": { "x": 342, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_8":  { "frame": { "x": 399, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_9":  { "frame": { "x": 456, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_10": { "frame": { "x": 513, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_J":  { "frame": { "x": 570, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_Q":  { "frame": { "x": 627, "y": 89,  "w": 57, "h": 89 } },
+    "diamond_K":  { "frame": { "x": 684, "y": 89,  "w": 57, "h": 89 } },
+
+    "spade_A":  { "frame": { "x": 0,   "y": 178, "w": 57, "h": 89 } },
+    "spade_2":  { "frame": { "x": 57,  "y": 178, "w": 57, "h": 89 } },
+    "spade_3":  { "frame": { "x": 114, "y": 178, "w": 57, "h": 89 } },
+    "spade_4":  { "frame": { "x": 171, "y": 178, "w": 57, "h": 89 } },
+    "spade_5":  { "frame": { "x": 228, "y": 178, "w": 57, "h": 89 } },
+    "spade_6":  { "frame": { "x": 285, "y": 178, "w": 57, "h": 89 } },
+    "spade_7":  { "frame": { "x": 342, "y": 178, "w": 57, "h": 89 } },
+    "spade_8":  { "frame": { "x": 399, "y": 178, "w": 57, "h": 89 } },
+    "spade_9":  { "frame": { "x": 456, "y": 178, "w": 57, "h": 89 } },
+    "spade_10": { "frame": { "x": 513, "y": 178, "w": 57, "h": 89 } },
+    "spade_J":  { "frame": { "x": 570, "y": 178, "w": 57, "h": 89 } },
+    "spade_Q":  { "frame": { "x": 627, "y": 178, "w": 57, "h": 89 } },
+    "spade_K":  { "frame": { "x": 684, "y": 178, "w": 57, "h": 89 } },
+
+    "heart_A":  { "frame": { "x": 0,   "y": 267, "w": 57, "h": 89 } },
+    "heart_2":  { "frame": { "x": 57,  "y": 267, "w": 57, "h": 89 } },
+    "heart_3":  { "frame": { "x": 114, "y": 267, "w": 57, "h": 89 } },
+    "heart_4":  { "frame": { "x": 171, "y": 267, "w": 57, "h": 89 } },
+    "heart_5":  { "frame": { "x": 228, "y": 267, "w": 57, "h": 89 } },
+    "heart_6":  { "frame": { "x": 285, "y": 267, "w": 57, "h": 89 } },
+    "heart_7":  { "frame": { "x": 342, "y": 267, "w": 57, "h": 89 } },
+    "heart_8":  { "frame": { "x": 399, "y": 267, "w": 57, "h": 89 } },
+    "heart_9":  { "frame": { "x": 456, "y": 267, "w": 57, "h": 89 } },
+    "heart_10": { "frame": { "x": 513, "y": 267, "w": 57, "h": 89 } },
+    "heart_J":  { "frame": { "x": 570, "y": 267, "w": 57, "h": 89 } },
+    "heart_Q":  { "frame": { "x": 627, "y": 267, "w": 57, "h": 89 } },
+    "heart_K":  { "frame": { "x": 684, "y": 267, "w": 57, "h": 89 } }
+  },
+
+  "animations": {
+    "clubs":   ["club_A","club_2","club_3","club_4","club_5","club_6","club_7","club_8","club_9","club_10","club_J","club_Q","club_K"],
+    "diamonds":["diamond_A","diamond_2","diamond_3","diamond_4","diamond_5","diamond_6","diamond_7","diamond_8","diamond_9","diamond_10","diamond_J","diamond_Q","diamond_K"],
+    "spades":  ["spade_A","spade_2","spade_3","spade_4","spade_5","spade_6","spade_7","spade_8","spade_9","spade_10","spade_J","spade_Q","spade_K"],
+    "hearts":  ["heart_A","heart_2","heart_3","heart_4","heart_5","heart_6","heart_7","heart_8","heart_9","heart_10","heart_J","heart_Q","heart_K"]
+  },
+
+  "meta": {
+    "image": "cardSpriteSheet.png",
+    "size": { "w": 741, "h": 356 },
+    "scale": "1"
+  }
+}
