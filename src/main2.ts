@@ -135,6 +135,21 @@ startButton.on("pointerdown", async()=>{
 
 
 
+const addCardToPlayerDeck = ()=>{
+
+
+
+}
+
+
+const removeDisplayPlayers =()=>{
+
+    
+
+}
+
+
+
 
 import { generateRandomNumber } from "./scripts/generateRandom";
 

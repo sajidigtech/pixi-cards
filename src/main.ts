@@ -13,8 +13,8 @@ let player2;
 const app = new Application();
 
 await app.init({
-  width: 1800,
-  height: 1000,
+  width: window.innerWidth,
+  height: window.innerHeight,
   backgroundColor: 0x1099bb,
 })
 
@@ -29,6 +29,30 @@ app.stage.addChild(previewCardsContainer);
 
 const cardSheet = await Assets.load("assets/cardAtlas.json");
 // important to fetch card sheet 
+
+
+// two containers for 2 players ok ?
+
+const player1Container = new Container();
+player1Container.position.set(50, app.screen.height - 350);
+
+// New v8 API
+const pBG1 = new Graphics();
+pBG1.fill(0xBCD4E6)       // start a fill with color
+     .rect(0, 0, 500, 300) // draw rectangle
+     .fill();              // finalize fill (like endFill)
+
+player1Container.addChild(pBG1);
+
+
+const player2Container = new Container();
+player2Container.position.set(app.screen.width -550, app.screen.height-350);
+
+const pBG2 = new Graphics();
+pBG2.fill(0xBCD4E6).rect(0,0,500,300).fill();
+player2Container.addChild(pBG2);
+
+
 
 
 
@@ -112,25 +136,16 @@ startButton.cursor = "pointer";
 app.stage.addChild(startButton);
 
 
-startButton.on("pointerdown", async()=>{
+startButton.on("pointerdown", ()=>{
   gameStarted = true;
   startButton.visible = false;
   deckSprite.visible = true;
   previewCardsContainer.visible = false;
 
-   const randomIndex = Math.floor(Math.random() * deck.length);
-   const card = deck[randomIndex];
+  app.stage.addChild(player1Container);
+  app.stage.addChild(player2Container);
 
-   console.log("Picked card:", card); 
-
-   const cardTexture = Texture.from(card.frameName);
-   const cardSprite = new Sprite(cardTexture);
-   cardSprite.anchor.set(0.5);
-   cardSprite.x = app.screen.width / 2;
-   cardSprite.y = 400; // deck ke neeche
-   cardSprite.scale.set(1.5);
-   await new Promise((resolve)=>setTimeout(resolve,1000));
-   app.stage.addChild(cardSprite);
+  
 })
 
 
