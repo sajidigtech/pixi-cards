@@ -112,7 +112,7 @@ startButton.cursor = "pointer";
 app.stage.addChild(startButton);
 
 
-startButton.on("pointerdown", ()=>{
+startButton.on("pointerdown", async()=>{
   gameStarted = true;
   startButton.visible = false;
   deckSprite.visible = true;
@@ -129,6 +129,7 @@ startButton.on("pointerdown", ()=>{
    cardSprite.x = app.screen.width / 2;
    cardSprite.y = 400; // deck ke neeche
    cardSprite.scale.set(1.5);
+   await new Promise((resolve)=>setTimeout(resolve,1000));
    app.stage.addChild(cardSprite);
 })
 
