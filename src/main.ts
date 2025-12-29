@@ -4,6 +4,8 @@ import { createDeck } from "./scripts/generateDeck";
 
 const deck = createDeck();
 
+console.log("the value of deck", deck)
+
 let player1;
 let player2;
 
@@ -21,15 +23,18 @@ const divContainer = document.getElementById("pixi-container")!;
 divContainer.appendChild(app.canvas);
 
 const previewCardsContainer = new Container();
+// this conatiner will have all 4 card flipbook display when game over!
 app.stage.addChild(previewCardsContainer);
 
 
 const cardSheet = await Assets.load("assets/cardAtlas.json");
+// important to fetch card sheet 
 
 
-const suits = ["clubs", "diamonds", "spades", "hearts"]
+
 
 const clubCards = new AnimatedSprite(cardSheet.animations["clubs"]) // ye array me frames hai
+// means isse apan clubs card ka animation (just all card display like flipbook show hoga )
 
 
 // config : 
@@ -44,6 +49,8 @@ const animationSpeed = 0.02;
 
 
 let gameStarted = false;
+
+const suits = ["clubs", "diamonds", "spades", "hearts"]
 
 if(!gameStarted){
   suits.forEach((suit, index) => {
@@ -110,6 +117,19 @@ startButton.on("pointerdown", ()=>{
   startButton.visible = false;
   deckSprite.visible = true;
   previewCardsContainer.visible = false;
+
+   const randomIndex = Math.floor(Math.random() * deck.length);
+   const card = deck[randomIndex];
+
+   console.log("Picked card:", card); 
+
+   const cardTexture = Texture.from(card.frameName);
+   const cardSprite = new Sprite(cardTexture);
+   cardSprite.anchor.set(0.5);
+   cardSprite.x = app.screen.width / 2;
+   cardSprite.y = 400; // deck ke neeche
+   cardSprite.scale.set(1.5);
+   app.stage.addChild(cardSprite);
 })
 
 
